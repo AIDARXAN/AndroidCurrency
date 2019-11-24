@@ -11,9 +11,9 @@
         android:id="@+id/country_text_view"
         android:layout_width="192dp"
         android:layout_height="23dp"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="16dp"
         android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/position"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="TextView" />
 
@@ -21,11 +21,20 @@
         android:id="@+id/currency_text_view"
         android:layout_width="92dp"
         android:layout_height="25dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="8dp"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/country_text_view"
         tools:text="TextView" />
+
+    <TextView
+        android:id="@+id/position"
+        android:layout_width="33dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

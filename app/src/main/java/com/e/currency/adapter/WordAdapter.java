@@ -52,6 +52,7 @@ public class WordAdapter extends RecyclerView.Adapter<WordAdapter.WordViewHolder
     public void onBindViewHolder(@NonNull WordViewHolder holder, int position) {
         Currency currency = currencies.get(position);
         holder.bind(currency);
+//        holder.positionTextView.setText(position);
     }
 
     @Override
@@ -60,13 +61,16 @@ public class WordAdapter extends RecyclerView.Adapter<WordAdapter.WordViewHolder
     }
 
     class WordViewHolder extends RecyclerView.ViewHolder {
+        private TextView positionTextView;
         private TextView wordTextView;
         private TextView translateTextView;
 
         public WordViewHolder(@NonNull View itemView) {
             super(itemView);
+            positionTextView = itemView.findViewById(R.id.position);
             wordTextView = itemView.findViewById(R.id.country_text_view);
             translateTextView = itemView.findViewById(R.id.currency_text_view);
+
             itemView.setOnLongClickListener(new View.OnLongClickListener(){
 
                 @Override
@@ -75,6 +79,8 @@ public class WordAdapter extends RecyclerView.Adapter<WordAdapter.WordViewHolder
                     return true;
                 }
             });
+
+//            positionTextView.setText(getAdapterPosition());
         }
 
         public void bind(Currency currency) {

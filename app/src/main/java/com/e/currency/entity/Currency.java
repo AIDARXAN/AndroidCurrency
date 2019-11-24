@@ -13,6 +13,7 @@ public class Currency {
     private String country;
     private String currency;
 
+
     public Currency(@NonNull String country, String currency) {
         this.country = country;
         this.currency = currency;
